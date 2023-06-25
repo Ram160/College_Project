@@ -1,0 +1,242 @@
+/* Created by Ram Chouhan*/
+*
+{
+	box-sizing:border-box;
+}
+body
+{
+	margin:0px;
+	display:flex;
+	justify-content:center;
+}
+.box
+{
+	width:850px;
+	background:#afc;
+}
+
+.header
+{
+	height:70px;
+	width:850px;
+	background:seagreen;
+}
+
+
+.logo
+{
+	height:70px;
+	width:70px;
+	background-size:cover;
+	float:left;
+	border-radius:50%;
+}
+.title
+{
+	height:70px;
+	width:300px;
+	float:left;
+	padding:0px 5px;
+	font-style:arial;
+	font-weight:bold;
+	color:orange;
+	border-radius:15px;
+	font-size:30px;
+}
+.title:hover
+{
+	background-color:orange;
+	color:#44f;
+}
+
+.menubar
+{
+	height:50px;
+	width:850px;
+}
+.menu
+{
+	height:35px;
+	width:100px;
+	float:left;
+	margin:5px 20px;
+	padding:7px 16px;
+	text-align:center;
+	border-radius:15px;
+	color:orange;
+	background-color:#00f;
+}
+.menu:hover
+{
+	background-color:orange;
+	color:#00f;
+}
+
+.slider
+{
+	height:250px;
+	width:850px;
+	
+}
+
+.main
+{
+	background-color:#afc;
+	width:850px;
+}
+.mleft
+{
+	height:450px;
+	width:150px;
+	padding:20px 5px;
+	float:left;
+	background-color: #afc;
+}
+.Mmenu
+{
+	height:35px;
+	width:100px;
+	float:left;
+	margin:15px 0px 20px 15px;
+	padding:5px 10px;
+	text-align:center;
+	border-radius:15px;
+	color:orange;
+	background-color:#00f;
+}
+.Mmenu:hover
+{
+	background-color:orange;
+	color:#00f;
+}
+.enquiry
+{
+	float:right;
+	width:700px;
+	text-align:justify;
+	padding:25px 10px;
+	border-left:1px solid red;
+	background-color: #ccc
+}
+.mright
+{
+	float:right;
+	width:700px;
+	text-align:justify;
+	padding:25px 10px;
+	border-left:1px solid red;
+	background-color: #ccc;
+}
+.footer
+{
+	clear:both;
+	height:150px;
+	width:850px;
+	background-color:#00d;
+}
+.Fmenu
+{
+	height:25px;
+	float:left;
+	margin:15px 0px 15px 0px;
+	padding:4px 10px;
+	text-align:center;
+	border-right:1px solid;
+	color:orange;
+}
+.lm
+{
+	margin-left:350px;
+}
+.br
+{
+		border:none;
+}
+.image
+{
+	height:120px;
+	width:250px;
+	background:orange;
+	float:left;
+	margin:0px 35px 15px 45px;
+}
+.img
+{
+	height:120px;
+	width:250px;
+	transition:1s;
+}
+.img:hover
+{
+	transform:scale(3);
+	transition:1s;
+	text-align:center;
+}
+.contact
+{
+	height:450px;
+	width:700px;
+	float:right;
+	padding:80px 0px;
+	background-color: #ccc;
+	border-left: #000;
+}
+.crow
+{
+	height:30px;
+	width:450px;
+	margin:10px;
+}
+.cleft
+{
+	padding: 5px 10px;
+	height:30px;
+	width:100px;
+	float:left;
+	background:white;
+	border-right:1px solid black;
+}
+.cright
+{
+	height:30px;
+	padding: 0px 10px;
+	width:350px;
+	float:left;
+	background:white;
+}
+.contact_left
+{
+	height:30px;
+	width:100px;
+	padding: 5px 20px;
+	float:left;
+	background:white;
+	border-right:1px solid black;
+}
+.contact_right
+{
+	height:30px;
+	width:350px;
+	float:left;
+	padding: 5px;
+	background:white;
+}
+.bn
+{
+	border:none;
+}
+.cright input,textarea
+{
+	height:30px;
+	border:1px solid;
+	border-radius:5px;
+}
+.map
+{
+	height:250px;
+	width:850px;
+}
+r
+{
+	color:red;
+}

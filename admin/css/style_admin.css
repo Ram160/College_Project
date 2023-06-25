@@ -1,0 +1,138 @@
+*
+{
+    font-size: 20px;
+    font-family:sans-serif;
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    overflow: hidden;
+    display: block;
+    background: transparent;
+    border: none;
+}
+title
+{
+    display: none;
+}
+
+.form table
+{
+    height:100%;
+    width:100%;
+    filter:drop-shadow(3px 3px 3px #000);
+}
+.form td
+{
+    padding: 20px;    
+}
+.form input,textarea
+{
+    height:45px;
+    width:50%;
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.form button
+{
+    height:50px;
+    background-color: rgb(53, 179, 53);
+    width:50%;
+    box-shadow: 3px 3px 10px rgb(9, 44, 23);
+    border-radius:5px;
+}
+.form button:hover
+{
+    transform: scale(1.1);
+}
+
+/*==================This is after ============================*/
+.outer
+{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+
+.header
+{
+    height:100px;
+    width: 100%;
+    background-color: chocolate;
+}
+.logo
+{
+    height:100%;
+    width:100px;
+    background-size: cover;
+    border-radius:50%;
+    float:left;
+}
+.name
+{
+    font-size:25px;
+    width: 100px;
+    float:left;
+    height: 100px;
+    background-color: rgb(0, 128, 255);
+}
+
+
+.main
+{
+    height: 84.5vh;
+    width:100%;
+    
+        --s: 80px; /* the size */
+        --c: #5E8C6A;
+        
+        --_s: calc(2*var(--s)) calc(2*var(--s));
+        --_g: 35.36% 35.36% at;
+        --_c: #0000 66%,#BFB35A 68% 70%,#0000 72%;
+        background:
+          radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s),
+          radial-gradient(var(--_g) 0    75%,var(--_c)) var(--s) var(--s)/var(--_s),
+          radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s),
+          radial-gradient(var(--_g) 0    75%,var(--_c)) 0 0/var(--_s),
+          repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s),
+          radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s)
+          var(--c);
+
+    
+}
+
+.mleft
+{
+    height: 100%;
+    width:200px;
+    float:left;
+    border-right: 1px dashed #000;
+}
+
+.menus
+{
+    background-color: rgb(153, 83, 43);
+    height:30px;
+    padding:5px 25px;
+    margin: 8px;
+}
+.menubar a
+{
+    text-decoration:none;
+}
+
+
+.mright,.heading h1
+{
+    display:inline;
+}
+.heading
+{
+    background: rgba(9,9,9,0.1);
+    backdrop-filter: blur(3px);
+    height: 50vh;
+    width: 50%;
+    margin:0 auto ;
+    border-radius:30px;
+}
