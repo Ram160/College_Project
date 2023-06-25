@@ -16,22 +16,10 @@
 
 </div>
 <div class="main"> 
-<div class="mleft"> 
-	<a href="home.html"> <div class="menus">Home </div> </a>
-	<a href="aboutus.html"> <div class="menus">Aboutus </div> </a>
-	<a href="addwhy.html"> <div class="menus">Add Why </div> </a>
-	<a href="viewwhy.html"> <div class="menus">View Why </div> </a>
-	<a href="addnews.html"> <div class="menus">Add News </div> </a>
-	<a href="viewnews.html"> <div class="menus">View News </div> </a>
-	<a href="addcourses.html"> <div class="menus">Add Course </div> </a>
-	<a href="viewcourses.html"> <div class="menus">View Course </div> </a>
-	<a href="addgallery.html"> <div class="menus">Add Gallery </div> </a>
-	<a href="viewgallery.html"> <div class="menus">View Gallery </div> </a>
-	<a href="enquiry.html"> <div class="menus">Enquiry </div> </a>
-	<a href="contactus.html"> <div class="menus">Contact Us </div> </a>
-	<a href="changepassword.html"> <div class="menus">Change Password</div> </a>
-	<a href="index.html"> <div class="menus">Logout</div> </a>
-
+<div class="mleft"> 	
+				<?php
+                    include("menubar.php");
+                ?>
 </div>
 <div class="mright"> 
 <form method="post">
