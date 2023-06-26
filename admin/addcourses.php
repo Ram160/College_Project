@@ -1,3 +1,33 @@
+<?php
+	$msg="";
+	$host="localhost:3306";
+	$user="root";
+	$password="";
+	$db_name="college_project";
+	
+	$connection=mysqli_connect($host,$user,$password,$db_name);
+
+	if($connection)
+		echo"Connection Successful";
+	else
+		die ("Connection Failed".mysqli_connect_error());
+	
+	if(isset($_POST['submit']))
+	{
+		$Title=$_POST['title'];
+		$Fees=$_POST['fees'];
+		$Duration=$_POST['duration'];
+		$Eligibility=$_POST['eligibility'];
+		$Department=$_POST['department'];
+		$Description=$_POST['description'];
+		$Visibility=$_POST['visibility'];
+
+		$sql="insert into addcourses(title,fees,duration,eligibility,	department,description,visibility) values('$Title','$Fees',	'$Duration','$Eligibility','$Department','$Description',	'$Visibility')";
+
+		if(mysqli_query($connection,$sql))
+			$msg
+	}
+?>
 <html>
 <head>
 <title> Add Courses </title>
@@ -19,50 +49,54 @@
 				</div>
 				<div class="mright"> 
 					<form method="post">
-
-
-					<div class="addrow" > 
-					<div class="addleft">  Title : </div>
-					<div class="addright"> <input type="text" name="title" class="input" placeholder="Title"> 		</	div>
+					<div class="row" > 
+						<div class="rleft"> 
+							 Title : 
+						</div>
+						<div class="r_right"> 
+							<input type="text" name="title" class="input" placeholder="Title">
+						</div>
 					</div>
 
-					<div class="addrow" > 
-					<div class="addleft">  Fees : </div>
-					<div class="addright"> <input type="text" name="fees" class="input" placeholder="Fees"> </		div>
+					<div class="row" > 
+						<div class="rleft">  Fees : </div>
+						<div class="r_right"> 
+							<input type="text" name="fees" class="input" placeholder="Fees"> 
+						</div>
 					</div>
 
-					<div class="addrow" > 
-					<div class="addleft">  Duration : </div>
-					<div class="addright"> <input type="text" name="duration" class="input" 			placeholder="Duration"> </	div>
+					<div class="row" > 
+					<div class="rleft">  Duration : </div>
+					<div class="r_right"> <input type="text" name="duration" class="input" 			placeholder="Duration"> </div>
 					</div>
 
-					<div class="addrow" > 
-					<div class="addleft">  Eigibility : </div>
-					<div class="addright"> <input type="text" name="eligibility" class="input" 				placeholder="Eligibility"> 	</div>
+					<div class="row" > 
+					<div class="rleft">  Eigibility : </div>
+					<div class="r_right"> <input type="text" name="eligibility" class="input" 				placeholder="Eligibility"> 	</div>
 					</div>
 
-					<div class="addrow" > 
-					<div class="addleft">  Department : </div>
-					<div class="addright"> <input type="text" name="department" class="input" 				placeholder="Department"> </	div>
+					<div class="row" > 
+					<div class="rleft">  Department : </div>
+					<div class="r_right"> <input type="text" name="department" class="input" 				placeholder="Department"> </div>
 					</div>
 
-					<div class="addrow" style="height:100px;" > 
-					<div class="addleft"> Description : </div>
-					<div class="addright" style="height:100px"> <textarea name="descr" 		class="tarea" 			placeholder="Description"></textarea> </div>
+					<div class="row" style="height:100px;" > 
+					<div class="rleft"> Description : </div>
+					<div class="r_right" style="height:100px"> <textarea name="description" 		class="tarea" 			placeholder="Description"></textarea> </div>
 					</div>
 
-					<div class="addrow" > 
-					<div class="addleft"> Visibility : </div>
-					<div class="addright"> 
-					<input type="radio" name="visible" class="" value="Hide" checked> Hide 
-					<input type="radio" name="visible" class="" value="show"> Show 
+					<div class="row" > 
+					<div class="rleft"> Visibility : </div>
+					<div class="r_right"> 
+					<input type="radio" name="visibility" class="" value="Hide" checked> Hide 
+					<input type="radio" name="visibility" class="" value="show"> Show 
 					 </div>
 					</div>
 
 
-					<div class="addrow"> 
-					<div class="addleft"></div>
-					<div class="addright"> <input type="submit" name="submit" value="Submit" 		class="submitbtn"> </div>
+					<div class="row"> 
+					<div class="rleft"></div>
+					<div class="r_right"> <input type="submit" name="submit" value="Submit" 		class="submitbtn"> </div>
 					</div>
 
 					</form>

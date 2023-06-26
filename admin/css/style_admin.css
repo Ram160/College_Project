@@ -9,32 +9,50 @@
     overflow: hidden;
     display: block;
     background: transparent;
-    border: none;
+    border: 1px solid #000;
 }
 title
 {
     display: none;
 }
 
-.form table
+.form
 {
     height:100%;
     width:100%;
     filter:drop-shadow(3px 3px 3px #000);
 }
-.form td
+.row
 {
-    padding: 20px;    
+    background: transparent;
+    height: 50px;
+    width: 100%;
+    margin: 15px 5px;
+    backdrop-filter: blur(3px);
 }
-.form input,textarea
+.rleft
 {
+    background: transparent;
+    height: 100%;
+    width: 40%;
+    float: left;
+}
+.r_right
+{
+    background: transparent;
+    height: 100%;
+    width: 60%;
+}
+.input 
+{
+    border-radius: 10px;
     height:45px;
-    width:50%;
+    width:80%;
     outline: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;    
 }
 
-.form button
+.button
 {
     height:50px;
     background-color: rgb(53, 179, 53);
@@ -42,7 +60,7 @@ title
     box-shadow: 3px 3px 10px rgb(9, 44, 23);
     border-radius:5px;
 }
-.form button:hover
+.button:hover
 {
     transform: scale(1.1);
 }
