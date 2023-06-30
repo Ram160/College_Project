@@ -13,14 +13,14 @@
 	    	Description : 
 		</div>
 		<div class="r_right"> 
-			<textarea type="text" name="description" class="input" placeholder="Title"></textarea>
+			<textarea type="text" name="description" class="input" placeholder="Description" ></textarea>
 		</div>
 	</div>
-    <div class="row"> 
+    
+	<div class="row"> 
 		<div class="rleft"></div>
 		<div class="r_right"> 
             <input type="submit" name="submit" value="Submit" class="button">
         </div>
 	</div>
-    </table>
 </form>

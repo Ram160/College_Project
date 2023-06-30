@@ -19,6 +19,7 @@
 				include("mleft.php");
 			?>
 			<div class="mright">
+				<h1>WELCOME TO LUCKY INSTITUTE OF PROFESSIONAL STUDIES</h1>
 				<p>
 					Lucky Institute of Professional Studies is established by the Lucky Shikshan Sansthan, Jodhpur which has continuously been in the field of education for the last 48 years. The institute is running under the kind and able guidance of its Chairman Sh. S.N. Kachhwaha and educationalist 	and a great visionary having a long association with the education field.
 				</p>

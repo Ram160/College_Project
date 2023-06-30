@@ -1,301 +1,66 @@
-<html>
-<head>
-<title> View Gallery </title>
-<link href="css/style.css" rel="stylesheet" /> 
-<link href="css/font-awesome.min.css" rel="stylesheet" /> 
-</head>
-<body>
+<?php
+	$host="localhost:3306";
+	$username="root";
+	$password="";
+	$db_name="college_project";
 
+	$connection=mysqli_connect($host,$username,$password,$db_name);
 
-</body>
-<div class="outer">
-
-<div class="header"> 
-	<div class="hleft"> LIPS </div>
-    <div class="hright"> <img src="images/admin.png" width="100%" height="100%" /> </div>
-
-</div>
-<div class="main"> 
-<div class="mleft"> 
-				<?php
-                    include("menubar.php");
-                ?>
-</div>
-<div class="mright"> 
-<form method="post">
-
-<div class="viewrow"> 
+	if(!$connection)
+		die("Connection Failed".sqli_connect_error($connection));
 	
-	<div class="viewcol"><heading> S.NO </heading></div>
-	<div class="viewcol w120" > <heading> Title </heading></div>
-    <div class="viewcol w120" > <heading> Fees </heading></div>
-    <div class="viewcol w120" > <heading> Duration </heading></div>
-    <div class="viewcol w210" > <heading> Description </heading></div>
-
-    <div class="viewcol w120"> <heading> Visible </heading></div>
-	<div class="viewcol action"> <heading> Action </heading></div>
-    </heading>
-</div>
+	$sql="select * from addcourse";
+	$result=mysqli_query($connection,$sql);
+?>
 
 
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-<div class="viewrow"> 
-	<div class="viewcol"> 1</div>
-	<div class="viewcol w120" > C/C++</div>
-    <div class="viewcol w120" > 2000</div>
-    <div class="viewcol w120" > 1 Month</div>
-    <div class="viewcol w210" > Programming Language</div>
-	<div class="viewcol w120"> Hide</div>
-	<div class="viewcol action"> 
-    	<div class="editbtn"><b class="fa fa-pencil"></b> Edit</div>
-    	<div class="delbtn"><b class="fa fa-trash"></b> Delete</div>
-   </div>
-</div>
-
-
-
-
-
-
-
-
-</form>
-</div> <!-- mright-->
-</div> <!-- main end-->
-<div class="footer"> </div>
-
-</div>
+<html>
+	<head>
+		<title> View Course </title>
+		<link href="css/style_admin.css" rel="stylesheet" /> 
+	</head>
+	<body>
+		<div class="outer">
+			<?php
+		        include("header.php");
+		    ?>
+			<div class="main"> 
+				<div class="mleft"> 
+								<?php
+				                    include("menubar.php");
+				                ?>
+				</div>
+				<div class="mright"> 
+				<h1>View Courses</h1>
+					<form method="post" class="for">
+						<div class="viewrow"> 
+							<div class="viewcol"> S.NO </div>
+							<div class="viewcol w120" >  Title </div>
+						    <div class="viewcol w120" >  Fees </div>
+						    <div class="viewcol w120" >  Duration </div>
+						    <div class="viewcol w210" >  Description </div>
+						    <div class="viewcol w120">  Visible </div>
+							<div class="viewcol action">  Action </div>
+						</div>
+						<?php
+							while($row=mysqli_fetch_assoc($result))
+							{
+						?>
+						<div class="viewrow"> 
+							<div class="viewcol"> <?php echo $row['Sr. no.']; ?> </div>
+							<div class="viewcol w120" > <?php echo $row['Title']; ?> </div>
+						    <div class="viewcol w120" > <?php echo $row['Fees']; ?> </div>
+						    <div class="viewcol w120" > <?php echo $row['Duration']; ?> </div>
+						    <div class="viewcol w210" > <?php echo $row['Description']; ?> </div>
+							<div class="viewcol w120"> <?php echo $row['Visibility']; ?> </div>
+							<div class="viewcol action"> 			   </div>
+						</div>
+						<?php
+							}
+						?>
+					</form>
+				</div>
+			</div> 
+		</div>
+	</body>
 </html>

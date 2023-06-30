@@ -65,8 +65,8 @@
 							</div>
 							<div class="cright">
 								<div class="pn">
-									<input type="radio" name="gen" value="1" >Male</input>
-									<input type="radio" name="gen" value="2" >Female</input>
+									<input type="radio" name="gen" value="1" >Male
+									<input type="radio" name="gen" value="2" >Female
 								</div>
 							</div>
 						</div>
