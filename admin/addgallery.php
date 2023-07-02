@@ -1,59 +1,70 @@
+<?php
+    include("config/connection.php");
+    if(isset($_POST['submit']))
+    {
+        $Filename=$_FILES['Image']['name'];
+        $Tmpname=$_FILES['Image']['tmp_name'];
+        $Visibility=$_POST['Visibility'];        
+        $Folder="Images/".$Filename;
+        move_uploaded_file($Tmpname, $Folder);
+
+        $sql="INSERT INTO gallery (Image,Visibility) VALUES ('$Filename','$Visibility')";
+        $result=mysqli_query($connection,$sql);
+        if($result){
+            $msg="Images Added to Database";
+        }
+        else
+            $msg="Unable to insert Image to DataBase";
+    }
+?>
+
 <html>
-<head>
-<title> Add Gallery </title>
-<link href="css/style.css" rel="stylesheet" /> 
-<link href="css/font-awesome.min.css" rel="stylesheet" /> 
-</head>
-<body>
-
-
-</body>
-<div class="outer">
-
-<div class="header"> 
-	<div class="hleft"> LIPS </div>
-    <div class="hright"> <img src="images/admin.png" width="100%" height="100%" /> </div>
-
-</div>
-<div class="main"> 
-<div class="mleft"> 
-				<?php
-                    include("menubar.php");
-                ?>
-</div>
-<div class="mright"> 
-<form method="post">
-
-
-<div class="addrow" > 
-<div class="addleft">  Title : </div>
-<div class="addright"> <input type="text" name="title" class="input" placeholder="Title"> </div>
-</div>
-
-<div class="addrow" > 
-<div class="addleft">  Image : </div>
-<div class="addright"> <input type="file" name="file" class="input"> </div>
-</div>
-
-
-<div class="addrow" > 
-<div class="addleft"> Visibility : </div>
-<div class="addright"> 
-<input type="radio" name="visible" class="" value="Hide" checked> Hide 
-<input type="radio" name="visible" class="" value="show"> Show 
- </div>
-</div>
-
-
-<div class="addrow"> 
-<div class="addleft"></div>
-<div class="addright"> <input type="submit" name="submit" value="Submit" class="submitbtn"> </div>
-</div>
-
-</form>
-</div> <!-- mright-->
-</div> <!-- main end-- >
-<div class="footer"> </div>
-
-</div>
+    <head>
+        <title> Add Gallery </title>
+        <link href="css/style_admin.css" rel="stylesheet" /> 
+        <link href="css/font-awesome.min.css" rel="stylesheet" /> 
+    </head>
+    <body>
+        <?php
+            include("header.php");
+        ?>
+        <div class="main"> 
+            <div class="mleft"> 
+            <?php
+                include("menubar.php");
+            ?>
+            </div>
+            <div class="mright"> 
+                <h1>Add Gallery</h1>
+                <div class="heading">
+                    <form class="form" method="post" enctype="multipart/form-data">
+                        <div class="row" >
+                            <div class="rleft">
+                                Image :
+                            </div>
+                            <div class="r_right">
+                                <input type="file" name="Image" class="input">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="rleft">
+                                Visibility :
+                            </div>
+                            <div class="r_right">
+                                <input type="radio" name="Visibility" value="0" checked> Hide
+                                <input type="radio" name="Visibility" value="1"> Show
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="r_right">
+                                <input type="submit" name="submit" value="Submit" class="button">
+                                <?php echo $msg; ?>
+                            </div>
+                            <div class="rleft"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

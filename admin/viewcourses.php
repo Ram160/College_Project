@@ -53,7 +53,10 @@
 						    <div class="viewcol w120" > <?php echo $row['Duration']; ?> </div>
 						    <div class="viewcol w210" > <?php echo $row['Description']; ?> </div>
 							<div class="viewcol w120"> <?php echo $row['Visibility']; ?> </div>
-							<div class="viewcol action"> 			   </div>
+							<div class="viewcol action"> 
+							<a href="addcourses.php?uid=<?php echo $row['sno']; ?>"><div class="button"> Edit</div></a>
+    						<a href="viewcourses.php"><div class="button"> Delete</div></a>
+							</div>
 						</div>
 						<?php
 							}

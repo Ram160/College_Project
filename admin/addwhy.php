@@ -1,52 +1,46 @@
 <html>
+
 <head>
-<title> Add Why </title>
-<link href="css/style.css" rel="stylesheet" /> 
-<link href="css/font-awesome.min.css" rel="stylesheet" /> 
+    <title> Add Why </title>
+    <link href="css/style_admin.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
 </head>
+
 <body>
 
 
+
+    <?php
+    include("header.php");
+    ?>
+    <div class="main">
+        <div class="mleft">
+            <?php
+            include("menubar.php");
+            ?>
+        </div>
+        <div class="mright">
+            <div class="heading">
+                <form method="post" class="form">
+                    <div class="row">
+                        <div class="rleft"> Why Dmatics : </div>
+                        <div class="r_right"> <input type="text" name="heading" class="input" placeholder="Heading"> </div>
+                    </div>
+                    <div class="row">
+                        <div class="rleft"> Visibility : </div>
+                        <div class="r_right">
+                            <input type="radio" name="visible" class="" value="Hide" checked> Hide
+                            <input type="radio" name="visible" class="" value="show"> Show
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="rleft"></div>
+                        <div class="r_right"> <input type="submit" name="submit" value="submit" class="button"> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
-<div class="outer">
 
-<div class="header"> 
-	<div class="hleft"> LIPS </div>
-    <div class="hright"> <img src="images/admin.png" width="100%" height="100%" /> </div>
-
-</div>
-<div class="main"> 
-<div class="mleft"> 
-				<?php
-                    include("menubar.php");
-                ?>
-</div>
-<div class="mright"> 
-
-<form method="post">
-<div class="addrow" > 
-<div class="addleft"> Why Dmatics : </div>
-<div class="addright"> <input type="text" name="heading" class="input" placeholder="Heading"> </div>
-</div>
-
-<div class="addrow" > 
-<div class="addleft"> Visibility : </div>
-<div class="addright"> 
-<input type="radio" name="visible" class="" value="Hide" checked> Hide 
-<input type="radio" name="visible" class="" value="show"> Show 
- </div>
-</div>
-
-
-<div class="addrow"> 
-<div class="addleft"></div>
-<div class="addright"> <input type="submit" name="submit" value="submit" class="submitbtn"> </div>
-</div>
-</form>
-
-</div> <!-- mright-->
-</div> <!-- main end-- >
-<div class="footer"> </div>
-
-</div>
 </html>

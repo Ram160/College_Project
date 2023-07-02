@@ -1,17 +1,5 @@
 <?php
-	$msg="";
-	$host="localhost:3306";
-	$user="root";
-	$password="";
-	$db_name="college_project";
-	
-	$connection=mysqli_connect($host,$user,$password,$db_name);
-
-	if($connection)
-		echo"Connection Successful";
-	else
-		die ("Connection Failed".mysqli_connect_error());
-	
+	include("config/connection.php");
 	if(isset($_POST['submit']))
 	{
 		$Title=$_POST['title'];
