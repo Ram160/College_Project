@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                         <div class="row">
                             <div class="rleft"></div>
                             <div class="r_right">
-                                <input type="submit" name="submit" value="Submit" class="button">
+                                <input type="submit" name="submit" value="Update" class="button">
                             </div>
                         </div>
                     </form>

@@ -7,9 +7,6 @@
 </head>
 
 <body>
-
-
-
     <?php
     include("header.php");
     ?>
@@ -20,6 +17,7 @@
             ?>
         </div>
         <div class="mright">
+            <h1> Add Why</h1>
             <div class="heading">
                 <form method="post" class="form">
                     <div class="row">

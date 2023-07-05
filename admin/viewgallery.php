@@ -24,6 +24,7 @@ $result = mysqli_query($connection, $sql);
 			?>
 		</div>
 		<div class="mright">
+			<h1> View Gallery </h1>
 			<form method="post">
 				<div class="viewrow">
 					<div class="viewcol">

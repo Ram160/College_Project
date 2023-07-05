@@ -1,58 +1,46 @@
 <html>
+
 <head>
-<title> Contact Us </title>
-<link href="css/style.css" rel="stylesheet" /> 
-<link href="css/font-awesome.min.css" rel="stylesheet" /> 
+    <title> Contact Us </title>
+    <link href="css/style_admin.css" rel="stylesheet" />
 </head>
+
 <body>
-
-
-</body>
-<div class="outer">
-
-<div class="header"> 
-	<div class="hleft"> LIPS </div>
-    <div class="hright"> <img src="images/admin.png" width="100%" height="100%" /> </div>
-
-</div>
-<div class="main"> 
-<div class="mleft"> 
-				<?php
-                    include("menubar.php");
+    <div class="outer">
+        <?php
+        include("header.php");
+        ?>
+        <div class="main">
+            <div class="mleft">
+                <?php
+                include("menubar.php");
                 ?>
-</div>
-<div class="mright"> 
-<form method="post">
+            </div>
+            <div class="mright">
+                <h1>Change Password</h1>
+                <div class="heading">
+                    <form method="post" class="form">
+                        <div class="row">
+                            <div class="rleft"> Old Password : </div>
+                            <div class="r_right"> <input type="password" name="op" class="input" placeholder="Old Password "> </div>
+                        </div>
+                        <div class="row">
+                            <div class="rleft"> New Password : </div>
+                            <div class="r_right"> <input type="password" name="np" class="input" placeholder="New Password "> </div>
+                        </div>
+                        <div class="row">
+                            <div class="rleft"> Confirm Password : </div>
+                            <div class="r_right"> <input type="password" name="cp" class="input" placeholder="Confirm Password "> </div>
+                        </div>
+                        <div class="row">
+                            <div class="rleft"></div>
+                            <div class="r_right"> <input type="submit" name="submit" value="Update" class="button"> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-
-<div class="addrow" > 
-<div class="addleft">  Old Password : </div>
-<div class="addright"> <input type="password" name="op" class="input" placeholder="Old Password "> </div>
-</div>
-
-
-<div class="addrow" > 
-<div class="addleft">  New Password : </div>
-<div class="addright"> <input type="password" name="np" class="input" placeholder="New Password "> </div>
-</div>
-
-<div class="addrow" > 
-<div class="addleft">  Confirm Password : </div>
-<div class="addright"> <input type="password" name="cp" class="input" placeholder="Confirm Password "> </div>
-</div>
-
-
-
-
-<div class="addrow"> 
-<div class="addleft"></div>
-<div class="addright"> <input type="submit" name="submit" value="Update" class="submitbtn"> </div>
-</div>
-
-</form>
-</div> <!-- mright-->
-</div> <!-- main end-- >
-<div class="footer"> </div>
-
-</div>
 </html>
